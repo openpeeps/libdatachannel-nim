@@ -1,0 +1,125 @@
+nimTitle	bindings	libdatachannel/bindings.html	module libdatachannel/bindings		0
+nim	libdatachannel_dll	libdatachannel/bindings.html#libdatachannel_dll	const libdatachannel_dll		8
+nim	RTC_ENABLE_WEBSOCKET	libdatachannel/bindings.html#RTC_ENABLE_WEBSOCKET	const RTC_ENABLE_WEBSOCKET		19
+nim	RTC_ENABLE_MEDIA	libdatachannel/bindings.html#RTC_ENABLE_MEDIA	const RTC_ENABLE_MEDIA		20
+nim	RTC_DEFAULT_MTU	libdatachannel/bindings.html#RTC_DEFAULT_MTU	const RTC_DEFAULT_MTU		21
+nim	RTC_DEFAULT_MAXIMUM_FRAGMENT_SIZE	libdatachannel/bindings.html#RTC_DEFAULT_MAXIMUM_FRAGMENT_SIZE	const RTC_DEFAULT_MAXIMUM_FRAGMENT_SIZE		23
+nim	RTC_DEFAULT_MAXIMUM_PACKET_COUNT_FOR_NACK_CACHE	libdatachannel/bindings.html#RTC_DEFAULT_MAXIMUM_PACKET_COUNT_FOR_NACK_CACHE	const RTC_DEFAULT_MAXIMUM_PACKET_COUNT_FOR_NACK_CACHE		24
+nim	RTC_ERR_SUCCESS	libdatachannel/bindings.html#RTC_ERR_SUCCESS	const RTC_ERR_SUCCESS		26
+nim	RTC_ERR_INVALID	libdatachannel/bindings.html#RTC_ERR_INVALID	const RTC_ERR_INVALID		27
+nim	RTC_ERR_FAILURE	libdatachannel/bindings.html#RTC_ERR_FAILURE	const RTC_ERR_FAILURE		28
+nim	RTC_ERR_NOT_AVAIL	libdatachannel/bindings.html#RTC_ERR_NOT_AVAIL	const RTC_ERR_NOT_AVAIL		29
+nim	RTC_ERR_TOO_SMALL	libdatachannel/bindings.html#RTC_ERR_TOO_SMALL	const RTC_ERR_TOO_SMALL		30
+nim	rtcState	libdatachannel/bindings.html#rtcState	enum rtcState		33
+nim	rtcGatheringState	libdatachannel/bindings.html#rtcGatheringState	enum rtcGatheringState		41
+nim	rtcSignalingState	libdatachannel/bindings.html#rtcSignalingState	enum rtcSignalingState		46
+nim	RTCLogLevel	libdatachannel/bindings.html#RTCLogLevel	enum RTCLogLevel		53
+nim	RtcCertificateType	libdatachannel/bindings.html#RtcCertificateType	enum RtcCertificateType		62
+nim	RtcCodec	libdatachannel/bindings.html#RtcCodec	enum RtcCodec		67
+nim	RtcDirection	libdatachannel/bindings.html#RtcDirection	enum RtcDirection		73
+nim	RtcTransportPolicy	libdatachannel/bindings.html#RtcTransportPolicy	enum RtcTransportPolicy		80
+nim	rtcLogCallbackFunc	libdatachannel/bindings.html#rtcLogCallbackFunc	type rtcLogCallbackFunc		87
+nim	rtcDescriptionCallbackFunc	libdatachannel/bindings.html#rtcDescriptionCallbackFunc	type rtcDescriptionCallbackFunc		88
+nim	rtcCandidateCallbackFunc	libdatachannel/bindings.html#rtcCandidateCallbackFunc	type rtcCandidateCallbackFunc		89
+nim	rtcStateChangeCallbackFunc	libdatachannel/bindings.html#rtcStateChangeCallbackFunc	type rtcStateChangeCallbackFunc		90
+nim	rtcGatheringStateCallbackFunc	libdatachannel/bindings.html#rtcGatheringStateCallbackFunc	type rtcGatheringStateCallbackFunc		91
+nim	rtcSignalingStateCallbackFunc	libdatachannel/bindings.html#rtcSignalingStateCallbackFunc	type rtcSignalingStateCallbackFunc		92
+nim	rtcDataChannelCallbackFunc	libdatachannel/bindings.html#rtcDataChannelCallbackFunc	type rtcDataChannelCallbackFunc		93
+nim	rtcTrackCallbackFunc	libdatachannel/bindings.html#rtcTrackCallbackFunc	type rtcTrackCallbackFunc		94
+nim	rtcOpenCallbackFunc	libdatachannel/bindings.html#rtcOpenCallbackFunc	type rtcOpenCallbackFunc		95
+nim	rtcClosedCallbackFunc	libdatachannel/bindings.html#rtcClosedCallbackFunc	type rtcClosedCallbackFunc		96
+nim	rtcErrorCallbackFunc	libdatachannel/bindings.html#rtcErrorCallbackFunc	type rtcErrorCallbackFunc		97
+nim	rtcMessageCallbackFunc	libdatachannel/bindings.html#rtcMessageCallbackFunc	type rtcMessageCallbackFunc		98
+nim	rtcBufferedAmountLowCallbackFunc	libdatachannel/bindings.html#rtcBufferedAmountLowCallbackFunc	type rtcBufferedAmountLowCallbackFunc		99
+nim	rtcAvailableCallbackFunc	libdatachannel/bindings.html#rtcAvailableCallbackFunc	type rtcAvailableCallbackFunc		100
+nim	rtcInitLogger	libdatachannel/bindings.html#rtcInitLogger,RTCLogLevel,rtcLogCallbackFunc	proc rtcInitLogger(level: RTCLogLevel; cb: rtcLogCallbackFunc)		105
+nim	rtcSetUserPointer	libdatachannel/bindings.html#rtcSetUserPointer,cint,pointer	proc rtcSetUserPointer(id: cint; usePtr: pointer)		106
+nim	rtcGetUserPointer	libdatachannel/bindings.html#rtcGetUserPointer,cint	proc rtcGetUserPointer(i: cint): pointer		107
+nim	rtcConfiguration	libdatachannel/bindings.html#rtcConfiguration	object rtcConfiguration		113
+nim	rtcCreatePeerConnection	libdatachannel/bindings.html#rtcCreatePeerConnection,ptr.rtcConfiguration	proc rtcCreatePeerConnection(config: ptr rtcConfiguration): cint		127
+nim	rtcClosePeerConnection	libdatachannel/bindings.html#rtcClosePeerConnection,cint	proc rtcClosePeerConnection(pc: cint): cint		129
+nim	rtcDeletePeerConnection	libdatachannel/bindings.html#rtcDeletePeerConnection,cint	proc rtcDeletePeerConnection(pc: cint): cint		130
+nim	rtcSetLocalDescriptionCallback	libdatachannel/bindings.html#rtcSetLocalDescriptionCallback,cint,rtcDescriptionCallbackFunc	proc rtcSetLocalDescriptionCallback(pc: cint; cb: rtcDescriptionCallbackFunc): cint		131
+nim	rtcSetLocalCandidateCallback	libdatachannel/bindings.html#rtcSetLocalCandidateCallback,cint,rtcCandidateCallbackFunc	proc rtcSetLocalCandidateCallback(pc: cint; cb: rtcCandidateCallbackFunc): cint		132
+nim	rtcSetStateChangeCallback	libdatachannel/bindings.html#rtcSetStateChangeCallback,cint,rtcStateChangeCallbackFunc	proc rtcSetStateChangeCallback(pc: cint; cb: rtcStateChangeCallbackFunc): cint		133
+nim	rtcSetGatheringStateChangeCallback	libdatachannel/bindings.html#rtcSetGatheringStateChangeCallback,cint,rtcGatheringStateCallbackFunc	proc rtcSetGatheringStateChangeCallback(pc: cint; cb: rtcGatheringStateCallbackFunc): cint		134
+nim	rtcSetLocalDescription	libdatachannel/bindings.html#rtcSetLocalDescription,cint,ptr.cstring	proc rtcSetLocalDescription(pc: cint; type: ptr cstring): cint		135
+nim	rtcSetRemoteDescription	libdatachannel/bindings.html#rtcSetRemoteDescription,cint,cstring,cstring	proc rtcSetRemoteDescription(pc: cint; sdp: cstring; type: cstring): cint		136
+nim	rtcAddRemoteCandidate	libdatachannel/bindings.html#rtcAddRemoteCandidate,cint,cstring,cstring	proc rtcAddRemoteCandidate(pc: cint; cand: cstring; mid: cstring): cint		137
+nim	rtcGetLocalDescription	libdatachannel/bindings.html#rtcGetLocalDescription,cint,cstring,cint	proc rtcGetLocalDescription(pc: cint; buffer: cstring; size: cint): cint		138
+nim	rtcGetRemoteDescription	libdatachannel/bindings.html#rtcGetRemoteDescription,cint,cstring,cint	proc rtcGetRemoteDescription(pc: cint; buffer: cstring; size: cint): cint		139
+nim	rtcGetLocalDescriptionType	libdatachannel/bindings.html#rtcGetLocalDescriptionType,cint,cstring,cint	proc rtcGetLocalDescriptionType(pc: cint; buffer: cstring; size: cint): cint		140
+nim	rtcGetRemoteDescriptionType	libdatachannel/bindings.html#rtcGetRemoteDescriptionType,cint,cstring,cint	proc rtcGetRemoteDescriptionType(pc: cint; buffer: cstring; size: cint): cint		141
+nim	rtcGetLocalAddress	libdatachannel/bindings.html#rtcGetLocalAddress,cint,cstring,cint	proc rtcGetLocalAddress(pc: cint; buffer: cstring; size: cint): cint		142
+nim	rtcGetRemoteAddress	libdatachannel/bindings.html#rtcGetRemoteAddress,cint,cstring,cint	proc rtcGetRemoteAddress(pc: cint; buffer: cstring; size: cint): cint		143
+nim	rtcGetSelectedCandidatePair	libdatachannel/bindings.html#rtcGetSelectedCandidatePair,cint,cstring,cint,cstring,cint	proc rtcGetSelectedCandidatePair(pc: cint; local: cstring; localSize: cint;\n                            remote: cstring; remoteSize: cint): cint		144
+nim	rtcSetOpenCallback	libdatachannel/bindings.html#rtcSetOpenCallback,cint,rtcOpenCallbackFunc	proc rtcSetOpenCallback(id: cint; cb: rtcOpenCallbackFunc): cint		147
+nim	rtcSetClosedCallback	libdatachannel/bindings.html#rtcSetClosedCallback,cint,rtcClosedCallbackFunc	proc rtcSetClosedCallback(id: cint; cb: rtcClosedCallbackFunc): cint		148
+nim	rtcSetErrorCallback	libdatachannel/bindings.html#rtcSetErrorCallback,cint,rtcErrorCallbackFunc	proc rtcSetErrorCallback(id: cint; cb: rtcErrorCallbackFunc): cint		149
+nim	rtcSetMessageCallback	libdatachannel/bindings.html#rtcSetMessageCallback,cint,rtcMessageCallbackFunc	proc rtcSetMessageCallback(id: cint; cb: rtcMessageCallbackFunc): cint		150
+nim	rtcSendMessage	libdatachannel/bindings.html#rtcSendMessage,cint,cstring,cint	proc rtcSendMessage(id: cint; data: cstring; size: cint): cint		151
+nim	rtcIsOpen	libdatachannel/bindings.html#rtcIsOpen,cint	proc rtcIsOpen(id: cint): bool		152
+nim	rtcIsClosed	libdatachannel/bindings.html#rtcIsClosed,cint	proc rtcIsClosed(id: cint): bool		153
+nim	rtcGetBufferedAmount	libdatachannel/bindings.html#rtcGetBufferedAmount,cint	proc rtcGetBufferedAmount(id: cint): cint		154
+nim	rtcSetBufferedAmountLowThreshold	libdatachannel/bindings.html#rtcSetBufferedAmountLowThreshold,cint,cint	proc rtcSetBufferedAmountLowThreshold(id: cint; amount: cint): cint		157
+nim	rtcSetBufferedAmountLowCallback	libdatachannel/bindings.html#rtcSetBufferedAmountLowCallback,cint,rtcBufferedAmountLowCallbackFunc	proc rtcSetBufferedAmountLowCallback(id: cint; cb: rtcBufferedAmountLowCallbackFunc): cint		158
+nim	rtcGetAvailableAmount	libdatachannel/bindings.html#rtcGetAvailableAmount,cint	proc rtcGetAvailableAmount(id: cint): cint		161
+nim	rtcSetAvailableCallback	libdatachannel/bindings.html#rtcSetAvailableCallback,cint,rtcAvailableCallbackFunc	proc rtcSetAvailableCallback(id: cint; cb: rtcAvailableCallbackFunc): cint		164
+nim	rtcReceiveMessage	libdatachannel/bindings.html#rtcReceiveMessage,cint,cstring,ptr.cint	proc rtcReceiveMessage(id: cint; buffer: cstring; size: ptr cint): cint		165
+nim	RTCReliability	libdatachannel/bindings.html#RTCReliability	object RTCReliability		169
+nim	RTCDataChannelInit	libdatachannel/bindings.html#RTCDataChannelInit	object RTCDataChannelInit		175
+nim	rtcSetDataChannelCallback	libdatachannel/bindings.html#rtcSetDataChannelCallback,cint,rtcDataChannelCallbackFunc	proc rtcSetDataChannelCallback(pc: cint; cb: rtcDataChannelCallbackFunc): cint		183
+nim	rtcCreateDataChannel	libdatachannel/bindings.html#rtcCreateDataChannel,cint,cstring	proc rtcCreateDataChannel(pc: cint; label: cstring): cint		184
+nim	rtcCreateDataChannelEx	libdatachannel/bindings.html#rtcCreateDataChannelEx,cint,cstring,ptr.RTCDataChannelInit	proc rtcCreateDataChannelEx(pc: cint; label: cstring; init: ptr RTCDataChannelInit): cint		187
+nim	rtcDeleteDataChannel	libdatachannel/bindings.html#rtcDeleteDataChannel,cint	proc rtcDeleteDataChannel(dc: cint): cint		190
+nim	rtcGetDataChannelStream	libdatachannel/bindings.html#rtcGetDataChannelStream,cint	proc rtcGetDataChannelStream(dc: cint): cint		191
+nim	rtcGetDataChannelLabel	libdatachannel/bindings.html#rtcGetDataChannelLabel,cint,cstring,cint	proc rtcGetDataChannelLabel(dc: cint; buffer: cstring; size: cint): cint		192
+nim	rtcGetDataChannelProtocol	libdatachannel/bindings.html#rtcGetDataChannelProtocol,cint,cstring,cint	proc rtcGetDataChannelProtocol(dc: cint; buffer: cstring; size: cint): cint		193
+nim	rtcGetDataChannelReliability	libdatachannel/bindings.html#rtcGetDataChannelReliability,cint,ptr.RTCReliability	proc rtcGetDataChannelReliability(dc: cint; reliability: ptr RTCReliability): cint		194
+nim	RTCTrackInit	libdatachannel/bindings.html#RTCTrackInit	object RTCTrackInit		198
+nim	rtcSetTrackCallback	libdatachannel/bindings.html#rtcSetTrackCallback,cint,rtcTrackCallbackFunc	proc rtcSetTrackCallback(pc: cint; cb: rtcTrackCallbackFunc): cint		209
+nim	rtcAddTrack	libdatachannel/bindings.html#rtcAddTrack,cint,cstring	proc rtcAddTrack(pc: cint; mediaDescriptionSdp: cstring): cint		210
+nim	rtcAddTrackEx	libdatachannel/bindings.html#rtcAddTrackEx,cint,ptr.RTCTrackInit	proc rtcAddTrackEx(pc: cint; init: ptr RTCTrackInit): cint		212
+nim	rtcDeleteTrack	libdatachannel/bindings.html#rtcDeleteTrack,cint	proc rtcDeleteTrack(tr: cint): cint		214
+nim	rtcGetTrackDescription	libdatachannel/bindings.html#rtcGetTrackDescription,cint,cstring,cint	proc rtcGetTrackDescription(tr: cint; buffer: cstring; size: cint): cint		215
+nim	RTC_NAL_SEPARATOR_LENGTH	libdatachannel/bindings.html#RTC_NAL_SEPARATOR_LENGTH	RTCNalUnitSeparator.RTC_NAL_SEPARATOR_LENGTH		219
+nim	RTC_NAL_SEPARATOR_LONG_START_SEQUENCE	libdatachannel/bindings.html#RTC_NAL_SEPARATOR_LONG_START_SEQUENCE	RTCNalUnitSeparator.RTC_NAL_SEPARATOR_LONG_START_SEQUENCE		219
+nim	RTC_NAL_SEPARATOR_SHORT_START_SEQUENCE	libdatachannel/bindings.html#RTC_NAL_SEPARATOR_SHORT_START_SEQUENCE	RTCNalUnitSeparator.RTC_NAL_SEPARATOR_SHORT_START_SEQUENCE		219
+nim	RTC_NAL_SEPARATOR_START_SEQUENCE	libdatachannel/bindings.html#RTC_NAL_SEPARATOR_START_SEQUENCE	RTCNalUnitSeparator.RTC_NAL_SEPARATOR_START_SEQUENCE		219
+nim	RTCNalUnitSeparator	libdatachannel/bindings.html#RTCNalUnitSeparator	enum RTCNalUnitSeparator		219
+nim	RTCPacketizationHandlerInit	libdatachannel/bindings.html#RTCPacketizationHandlerInit	object RTCPacketizationHandlerInit		224
+nim	RTCStartTime	libdatachannel/bindings.html#RTCStartTime	object RTCStartTime		234
+nim	RTCSsrcForTypeInit	libdatachannel/bindings.html#RTCSsrcForTypeInit	object RTCSsrcForTypeInit		240
+nim	rtcSetH264PacketizationHandler	libdatachannel/bindings.html#rtcSetH264PacketizationHandler,cint,ptr.RTCPacketizationHandlerInit	proc rtcSetH264PacketizationHandler(tr: cint; init: ptr RTCPacketizationHandlerInit): cint		246
+nim	rtcSetOpusPacketizationHandler	libdatachannel/bindings.html#rtcSetOpusPacketizationHandler,cint,ptr.RTCPacketizationHandlerInit	proc rtcSetOpusPacketizationHandler(tr: cint; init: ptr RTCPacketizationHandlerInit): cint		250
+nim	rtcChainRtcpSrReporter	libdatachannel/bindings.html#rtcChainRtcpSrReporter,cint	proc rtcChainRtcpSrReporter(tr: cint): cint		254
+nim	rtcChainRtcpNackResponder	libdatachannel/bindings.html#rtcChainRtcpNackResponder,cint,cuint	proc rtcChainRtcpNackResponder(tr: cint; maxStoredPacketsCount: cuint): cint		257
+nim	rtcSetRtpConfigurationStartTime	libdatachannel/bindings.html#rtcSetRtpConfigurationStartTime,cint,ptr.RTCStartTime	proc rtcSetRtpConfigurationStartTime(id: cint; startTime: ptr RTCStartTime): cint		260
+nim	rtcStartRtcpSenderReporterRecording	libdatachannel/bindings.html#rtcStartRtcpSenderReporterRecording,cint	proc rtcStartRtcpSenderReporterRecording(id: cint): cint		263
+nim	rtcTransformSecondsToTimestamp	libdatachannel/bindings.html#rtcTransformSecondsToTimestamp,cint,cdouble,ptr.uint32	proc rtcTransformSecondsToTimestamp(id: cint; seconds: cdouble; timestamp: ptr uint32): cint		266
+nim	rtcTransformTimestampToSeconds	libdatachannel/bindings.html#rtcTransformTimestampToSeconds,cint,uint32,ptr.cdouble	proc rtcTransformTimestampToSeconds(id: cint; timestamp: uint32; seconds: ptr cdouble): cint		270
+nim	rtcGetCurrentTrackTimestamp	libdatachannel/bindings.html#rtcGetCurrentTrackTimestamp,cint,ptr.uint32	proc rtcGetCurrentTrackTimestamp(id: cint; timestamp: ptr uint32): cint		273
+nim	rtcGetTrackStartTimestamp	libdatachannel/bindings.html#rtcGetTrackStartTimestamp,cint,ptr.uint32	proc rtcGetTrackStartTimestamp(id: cint; timestamp: ptr uint32): cint		276
+nim	rtcSetTrackRtpTimestamp	libdatachannel/bindings.html#rtcSetTrackRtpTimestamp,cint,uint32	proc rtcSetTrackRtpTimestamp(id: cint; timestamp: uint32): cint		279
+nim	rtcGetPreviousTrackSenderReportTimestamp	libdatachannel/bindings.html#rtcGetPreviousTrackSenderReportTimestamp,cint,ptr.uint32	proc rtcGetPreviousTrackSenderReportTimestamp(id: cint; timestamp: ptr uint32): cint		282
+nim	rtcSetNeedsToSendRtcpSr	libdatachannel/bindings.html#rtcSetNeedsToSendRtcpSr,cint	proc rtcSetNeedsToSendRtcpSr(id: cint): cint		285
+nim	rtcGetTrackPayloadTypesForCodec	libdatachannel/bindings.html#rtcGetTrackPayloadTypesForCodec,cint,cstring,ptr.cint,cint	proc rtcGetTrackPayloadTypesForCodec(tr: cint; ccodec: cstring; buffer: ptr cint;\n                                size: cint): cint		288
+nim	rtcGetSsrcsForTrack	libdatachannel/bindings.html#rtcGetSsrcsForTrack,cint,ptr.uint32,cint	proc rtcGetSsrcsForTrack(tr: cint; buffer: ptr uint32; count: cint): cint		292
+nim	rtcGetCNameForSsrc	libdatachannel/bindings.html#rtcGetCNameForSsrc,cint,uint32,cstring,cint	proc rtcGetCNameForSsrc(tr: cint; ssrc: uint32; cname: cstring; cnameSize: cint): cint		295
+nim	rtcGetSsrcsForType	libdatachannel/bindings.html#rtcGetSsrcsForType,cstring,cstring,ptr.uint32,cint	proc rtcGetSsrcsForType(mediaType: cstring; sdp: cstring; buffer: ptr uint32;\n                   bufferSize: cint): cint		298
+nim	rtcSetSsrcForType	libdatachannel/bindings.html#rtcSetSsrcForType,cstring,cstring,cstring,cint,ptr.RTCSsrcForTypeInit	proc rtcSetSsrcForType(mediaType: cstring; sdp: cstring; buffer: cstring;\n                  bufferSize: cint; init: ptr RTCSsrcForTypeInit): cint		301
+nim	rtcWsConfiguration	libdatachannel/bindings.html#rtcWsConfiguration	object rtcWsConfiguration		309
+nim	rtcCreateWebSocket	libdatachannel/bindings.html#rtcCreateWebSocket,cstring	proc rtcCreateWebSocket(url: cstring): cint		317
+nim	rtcCreateWebSocketEx	libdatachannel/bindings.html#rtcCreateWebSocketEx,cstring,ptr.rtcWsConfiguration	proc rtcCreateWebSocketEx(url: cstring; config: ptr rtcWsConfiguration): cint		319
+nim	rtcDeleteWebSocket	libdatachannel/bindings.html#rtcDeleteWebSocket,cint	proc rtcDeleteWebSocket(ws: cint): cint		320
+nim	rtcGetWebSocketRemoteAddress	libdatachannel/bindings.html#rtcGetWebSocketRemoteAddress,cint,cstring,cint	proc rtcGetWebSocketRemoteAddress(ws: cint; buffer: cstring; size: cint): cint		321
+nim	rtcGetWebSocketPath	libdatachannel/bindings.html#rtcGetWebSocketPath,cint,cstring,cint	proc rtcGetWebSocketPath(ws: cint; buffer: cstring; size: cint): cint		322
+nim	RTCWebSocketClientCallbackFunc	libdatachannel/bindings.html#RTCWebSocketClientCallbackFunc	type RTCWebSocketClientCallbackFunc		325
+nim	rtcWsServerConfiguration	libdatachannel/bindings.html#rtcWsServerConfiguration	object rtcWsServerConfiguration		327
+nim	rtcCreateWebSocketServer	libdatachannel/bindings.html#rtcCreateWebSocketServer,ptr.rtcWsServerConfiguration,RTCWebSocketClientCallbackFunc	proc rtcCreateWebSocketServer(config: ptr rtcWsServerConfiguration;\n                         cb: RTCWebSocketClientCallbackFunc): cint		334
+nim	rtcDeleteWebSocketServer	libdatachannel/bindings.html#rtcDeleteWebSocketServer,cint	proc rtcDeleteWebSocketServer(wsserver: cint): cint		335
+nim	rtcGetWebSocketServerPort	libdatachannel/bindings.html#rtcGetWebSocketServerPort,cint	proc rtcGetWebSocketServerPort(wsserver: cint): cint		336
+nim	rtcPreload	libdatachannel/bindings.html#rtcPreload	proc rtcPreload()		338
+nim	rtcCleanup	libdatachannel/bindings.html#rtcCleanup	proc rtcCleanup()		339
+nim	RTCSctpSettings	libdatachannel/bindings.html#RTCSctpSettings	object RTCSctpSettings		343
+nim	rtcSetSctpSettings	libdatachannel/bindings.html#rtcSetSctpSettings,ptr.RTCSctpSettings	proc rtcSetSctpSettings(settings: ptr RTCSctpSettings): cint		360

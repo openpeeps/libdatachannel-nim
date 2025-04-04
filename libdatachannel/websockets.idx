@@ -1,0 +1,27 @@
+nimTitle	websockets	libdatachannel/websockets.html	module libdatachannel/websockets		0
+nim	onOpened	libdatachannel/websockets.html#onOpened	WebSocketListener.onOpened		18
+nim	onMessage	libdatachannel/websockets.html#onMessage	WebSocketListener.onMessage		18
+nim	onClosed	libdatachannel/websockets.html#onClosed	WebSocketListener.onClosed		18
+nim	onError	libdatachannel/websockets.html#onError	WebSocketListener.onError		18
+nim	WebSocketListener	libdatachannel/websockets.html#WebSocketListener	enum WebSocketListener		18
+nim	WebSocketIdentifier	libdatachannel/websockets.html#WebSocketIdentifier	type WebSocketIdentifier		21
+nim	WebSocketServer	libdatachannel/websockets.html#WebSocketServer	type WebSocketServer		22
+nim	newWebSocketServer	libdatachannel/websockets.html#newWebSocketServer,bool,Port	proc newWebSocketServer(enableTls: bool = false; port: Port = Port(0)): WebSocketServer		26
+nim	startServer	libdatachannel/websockets.html#startServer,WebSocketServer,RTCWebSocketClientCallbackFunc	proc startServer(wsserver: WebSocketServer; callback: RTCWebSocketClientCallbackFunc): WebSocketIdentifier		31
+nim	getPort	libdatachannel/websockets.html#getPort,WebSocketServer	proc getPort(wsserver: WebSocketServer): Port		39
+nim	send	libdatachannel/websockets.html#send,cint,string	proc send(id: cint; msg: string)		47
+nim	message	libdatachannel/websockets.html#message,cint,cstring	proc message(id: cint; msg: cstring)		51
+nim	message	libdatachannel/websockets.html#message,cint,string	proc message(id: cint; msg: string)		55
+nim	close	libdatachannel/websockets.html#close,WebSocketServer	proc close(wsserver: WebSocketServer)		59
+nim	WebSocketClient	libdatachannel/websockets.html#WebSocketClient	type WebSocketClient		69
+nim	newWebSocketClient	libdatachannel/websockets.html#newWebSocketClient,string,bool	proc newWebSocketClient(url: string; disableTlsVerification: bool = true): WebSocketClient		73
+nim	send	libdatachannel/websockets.html#send,WebSocketClient,string	proc send(wsclient: WebSocketClient; message: string)		82
+nim	message	libdatachannel/websockets.html#message,WebSocketClient,string	proc message(wsclient: WebSocketClient; msg: string): string		86
+nim	listen	libdatachannel/websockets.html#listen,WebSocketClient,WebSocketListener,	proc listen(wsclient: WebSocketClient; event: WebSocketListener;\n       callback: rtcOpenCallbackFunc | rtcClosedCallbackFunc)		90
+nim	listen	libdatachannel/websockets.html#listen,WebSocketClient,WebSocketListener,rtcMessageCallbackFunc	proc listen(wsclient: WebSocketClient; event: WebSocketListener;\n       callback: rtcMessageCallbackFunc)		97
+nim	listen	libdatachannel/websockets.html#listen,WebSocketClient,WebSocketListener,rtcErrorCallbackFunc	proc listen(wsclient: WebSocketClient; event: WebSocketListener;\n       callback: rtcErrorCallbackFunc)		101
+nim	close	libdatachannel/websockets.html#close,WebSocketClient	proc close(wsclient: WebSocketClient)		105
+nimgrp	close	libdatachannel/websockets.html#close-procs-all	proc		59
+nimgrp	message	libdatachannel/websockets.html#message-procs-all	proc		51
+nimgrp	send	libdatachannel/websockets.html#send-procs-all	proc		47
+nimgrp	listen	libdatachannel/websockets.html#listen-procs-all	proc		90
