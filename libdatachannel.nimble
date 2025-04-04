@@ -1,7 +1,7 @@
 # Package
 
 version       = "0.1.0"
-author        = "George Lemon"
+author        = "OpenPeeps"
 description   = "Standalone WebRTC Data Channels, WebRTC Media Transport, and WebSockets"
 license       = "MIT"
 srcDir        = "src"
