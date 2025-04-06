@@ -9,7 +9,7 @@
 
 <p align="center">
   <a href="https://openpeeps.github.io/libdatachannel-nim">API reference</a><br>
-  <img src="https://github.com/openpeeps/libdatachannel/workflows/test/badge.svg" alt="Github Actions">  <img src="https://github.com/openpeeps/libdatachannel/workflows/docs/badge.svg" alt="Github Actions">
+  <img src="https://github.com/openpeeps/libdatachannel-nim/workflows/test/badge.svg" alt="Github Actions">  <img src="https://github.com/openpeeps/libdatachannel-nim/workflows/docs/badge.svg" alt="Github Actions">
 </p>
 
 ## 😍 Key Features
