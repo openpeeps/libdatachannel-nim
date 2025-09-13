@@ -1,5 +1,4 @@
 <p align="center">
-  <img src="https://github.com/openpeeps/PKG/blob/main/.github/logo.png" width="90px"><br>
   Nim language 👑 bindings for Libdatachannel<br>A standalone WebRTC Data Channels, WebRTC Media Transport, and WebSockets
 </p>
 
